@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Business Card</string>
+    <string name="name_text">Siva Prasanth Sivakumar</string>
+    <string name="title_text">Android Developer</string>
+    <string name="phone_num_text">(123) 456-6789</string>
+    <string name="hash_tag_text">\@AndroidDev</string>
+    <string name="email_text">sivakumars3@montclair.edu</string>
 </resources>
