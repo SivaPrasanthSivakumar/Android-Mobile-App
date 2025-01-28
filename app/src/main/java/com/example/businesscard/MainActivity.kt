@@ -129,7 +129,7 @@ fun ContactInfoText(phoneNum: String, hashhtag: String, email: String, modifier:
         Row{
             Image(
                 painter = phone,
-                contentDescription = "Phone Logo"
+                contentDescription = "Phone Icon"
             )
             Text(
                 text = "\t" + phoneNum
@@ -139,7 +139,7 @@ fun ContactInfoText(phoneNum: String, hashhtag: String, email: String, modifier:
         Row{
             Image(
                 painter = share,
-                contentDescription = "Share Logo"
+                contentDescription = "Share Icon"
             )
             Text(
                 text = "\t"+hashhtag
@@ -148,7 +148,7 @@ fun ContactInfoText(phoneNum: String, hashhtag: String, email: String, modifier:
         Row{
             Image(
                 painter = mail,
-                contentDescription = "Email Logo"
+                contentDescription = "Email Icon"
             )
             Text(
                 text = "\t"+email
