@@ -63,22 +63,22 @@ fun AndriodLogoImage(modifier: Modifier = Modifier) {
         Column(
             modifier = Modifier.align(Alignment.Center),
             horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Image(
-                painter = image,
-                contentDescription = null,
-                modifier = Modifier
-                    .width(150.dp)
-                    .height(150.dp)
-                    .background(Color.Black)
-            )
-            NameTitleText(
-                name = stringResource(R.string.name_text),
-                title = stringResource(R.string.title_text),
-                modifier = Modifier.padding(top = 16.dp, bottom = 16.dp)
-            )
-        }
-
+        )
+            {
+                Image(
+                    painter = image,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .width(150.dp)
+                        .height(150.dp)
+                        .background(Color.Black)
+                )
+                NameTitleText(
+                    name = stringResource(R.string.name_text),
+                    title = stringResource(R.string.title_text),
+                    modifier = Modifier.padding(top = 16.dp, bottom = 16.dp)
+                )
+            }
         ContactInfoText(
             phoneNum = stringResource(R.string.phone_num_text),
             hashhtag = stringResource(R.string.hash_tag_text),
