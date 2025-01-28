@@ -9,10 +9,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,6 +36,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+
             BusinessCardTheme {
                 Scaffold(modifier = Modifier
                     .fillMaxSize()
@@ -102,6 +105,7 @@ fun NameTitleText(name: String, title: String, modifier: Modifier = Modifier) {
             fontWeight = FontWeight.Bold,
             fontSize = 25.sp
         )
+
         Text(
             text = title,
             fontWeight = FontWeight.Bold,
@@ -114,22 +118,44 @@ fun NameTitleText(name: String, title: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun ContactInfoText(phoneNum: String, hashhtag: String, email: String, modifier: Modifier = Modifier) {
-
+    val phone = painterResource(R.drawable.phone_24dp_78a75a)
+    val share = painterResource(R.drawable.share_24dp_78a75a)
+    val mail = painterResource(R.drawable.email_24dp_78a75a)
     Column(
         modifier = modifier,
         verticalArrangement = Arrangement.Center,
 
     )
     {
-        Text(
-            text = "phone"+phoneNum
-        )
-        Text(
-            text = hashhtag
-        )
-        Text(
-            text = email
-        )
+        Row{
+            Image(
+                painter = phone,
+                contentDescription = "Phone Logo"
+            )
+            Text(
+                text = "\t" + phoneNum
+            )
+        }
+
+        Row{
+            Image(
+                painter = share,
+                contentDescription = "Share Logo"
+            )
+            Text(
+                text = "\t"+hashhtag
+            )
+        }
+        Row{
+            Image(
+                painter = mail,
+                contentDescription = "Email Logo"
+            )
+            Text(
+                text = "\t"+email
+            )
+        }
+
     }
 }
 
